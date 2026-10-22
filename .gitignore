@@ -1,0 +1,16 @@
+node_modules/
+dist/
+test-results/
+test-artifacts/
+playwright-report/
+public/ocr/
+public/codecs/
+public/legal/
+release-candidates/
+*.log
+.env
+.env.*
+.ai-memory.toml*
+*.local
+__pycache__/
+*.pyc

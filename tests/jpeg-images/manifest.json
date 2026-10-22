@@ -1,0 +1,88 @@
+{
+  "schemaVersion": 1,
+  "purpose": "Synthetic only; real JPEG/TIFF bytes, no OCR mock",
+  "files": [
+    {
+      "name": "calendar.jpg",
+      "bytes": 57929,
+      "sha256": "04b92acf7f9463d27e9a92edfa0ae2d6d9e6594b6bd8c42ed0f89a75f7f51c7a",
+      "purpose": "Synthetic calendar rasterized through Canvas, browser JPEG encoder"
+    },
+    {
+      "name": "calendar-jpeg6.tiff",
+      "bytes": 58093,
+      "sha256": "07e574d2ff79618c36ee90c1c8f20ea1f7245ac516d2fb22d427cdf39f58055b",
+      "compression": 6,
+      "width": 1340,
+      "height": 694
+    },
+    {
+      "name": "calendar-jpeg7.tiff",
+      "bytes": 58069,
+      "sha256": "bf401e613aee13a847a722568cf4d1ef8da16b1dd075a4368f7f7ac581aaa096",
+      "compression": 7,
+      "width": 1340,
+      "height": 694
+    },
+    {
+      "name": "gray.jpg",
+      "bytes": 137,
+      "sha256": "af799503f6a62f5ca4df3d4c0c95802d730b346960c3ccb5ec2ae7e4ef6291d7",
+      "components": 1,
+      "transform": 0,
+      "nativeDimensions": [16, 16]
+    },
+    {
+      "name": "gray-strip.tiff",
+      "bytes": 271,
+      "sha256": "142d4454bfa8fef0cabd1813f33aa3e1c968118019781b9b192787bddc1d2f1c",
+      "components": 1,
+      "tiled": false
+    },
+    {
+      "name": "gray-tile.tiff",
+      "bytes": 283,
+      "sha256": "97012f6fc1fdff993b7935988a739e89133beda084d5aab927ed23bee0a79d8f",
+      "components": 1,
+      "tiled": true
+    },
+    {
+      "name": "rgb.jpg",
+      "bytes": 149,
+      "sha256": "767d20d1e3b4f54b4e8214e246d2a5aab0a66c3bf5a0ecd424e41fb9673cc684",
+      "components": 3,
+      "transform": 0,
+      "nativeDimensions": [16, 16]
+    },
+    {
+      "name": "rgb-strip.tiff",
+      "bytes": 289,
+      "sha256": "522028828ac3ae318e81e735eb3aef4323a9046e54021d9296b686d285253bdc",
+      "components": 3,
+      "tiled": false
+    },
+    {
+      "name": "rgb-tile.tiff",
+      "bytes": 301,
+      "sha256": "74f2ea3cee03468fb238c2c973434da97bf706d2b58d25d1dcda0734695d202b",
+      "components": 3,
+      "tiled": true
+    },
+    {
+      "name": "cmyk.jpg",
+      "bytes": 171,
+      "sha256": "8322e985cc57676428b700f1f234ffafbdd9ff9b7b4ac24e52246cf767f4f9ea",
+      "components": 4,
+      "transform": 0,
+      "nativeDimensions": [16, 16]
+    },
+    {
+      "name": "ycck.jpg",
+      "bytes": 171,
+      "sha256": "5f0a2595544767589a26a9617421fcb0a9bc9f69ca8be74b4bf759436e3cc178",
+      "components": 4,
+      "transform": 2,
+      "nativeDimensions": [16, 16]
+    }
+  ]
+}

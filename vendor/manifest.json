@@ -1,0 +1,27 @@
+{
+  "schemaVersion": 1,
+  "utif": {
+    "version": "3.1.0",
+    "upstream": "https://github.com/photopea/UTIF.js/tree/27f1098a67c3cfd4348c9b8fd887fcd8cd171095",
+    "originalSha256": "e3e76115f49571e39624c3316a76b3c4c5b2c5ca518dfec4b66a9f7af8c6d059",
+    "removedJpegBlockSha256": "9e28cb5379076499bf35d57dc1862aa45e1382f7bfef2ae0dd36ff8a429fd92b",
+    "forkSha256": "6880f53f911408eba26e07fea021b163f6d9ea7317dc7cf88dafa504fb5184d5",
+    "changes": [
+      "ESM interface",
+      "explicit JPEG source replacement"
+    ]
+  },
+  "jpeg": {
+    "upstream": "https://raw.githubusercontent.com/mozilla/pdf.js/11ab3b5c000eb13e7ea5632ac36b1109ff7280b7/src/core/jpg.js",
+    "revision": "11ab3b5c000eb13e7ea5632ac36b1109ff7280b7",
+    "originalSha256": "8d3bc82c19aacad00108425c98046affc417c59f70670daa1bdfbd0f766dc9ba",
+    "adaptedSha256": "4bde79bb5c50a742d7d4471deeef6a5050aa3167a19bbae1ba16f6f577ffdec5",
+    "changes": [
+      "local warning adapter; original ESM export retained"
+    ],
+    "license": "Apache-2.0",
+    "copyright": "Copyright 2014 Mozilla Foundation",
+    "lineage": "Forked from notmasteryet/jpgjs; original by notmasteryet"
+  },
+  "caveat": "The replacement revision is explicit; it is not claimed to be the unidentified historical source of the removed block."
+}

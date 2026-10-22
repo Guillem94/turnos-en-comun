@@ -1,0 +1,86 @@
+{
+  "purpose": "Synthetic calendars only; no OCR mock outputs",
+  "encoders": {
+    "icodec": "0.6.0",
+    "utif": "3.1.0",
+    "bmp": "fixture writer BMP24",
+    "gif": "fixture writer palette/LZW"
+  },
+  "files": [
+    {
+      "name": "calendar-animated.gif",
+      "bytes": 1400474,
+      "sha256": "3fd42c14917a18f9fc2891c805c34b0832b4f98007b997e1ad26c9786b765afd"
+    },
+    {
+      "name": "calendar-pages.tiff",
+      "bytes": 4744140,
+      "sha256": "f7a40818b9d426a7c0b2451c405ef138889c12a3cad2b737cec1d51814194a5b"
+    },
+    {
+      "name": "calendar.avif",
+      "bytes": 13250,
+      "sha256": "9b9fc3d72db15c78a5fa6b14801c039e5d71a3520f3e82cbfc286da321b6d3fb"
+    },
+    {
+      "name": "calendar.bmp",
+      "bytes": 2789934,
+      "sha256": "07fefc053701cd7efc9cecdae18009fb0d2742a96a1712725ff1d1e0bc4fa430"
+    },
+    {
+      "name": "calendar.gif",
+      "bytes": 700247,
+      "sha256": "6e9ad18789813063fd535139be8cb12e9933544914c53d7d1f10be77d1aede38"
+    },
+    {
+      "name": "calendar.heic",
+      "bytes": 83795,
+      "sha256": "8543ece2d4371ef328b22bdf20ba95d22e1fcda3283576bc94e9b8899116254b"
+    },
+    {
+      "name": "calendar.tiff",
+      "bytes": 3720840,
+      "sha256": "af8c9257b83af8c05c80c248a8905f3fcd2e3d278c07dd15a0cad0ef8676006b"
+    },
+    {
+      "name": "list.png",
+      "bytes": 24993,
+      "sha256": "6ee864d8a188edc0cd4077be85dc2149b0dcd3ee0349cf22fe978617296a4c98"
+    },
+    {
+      "name": "monthly.png",
+      "bytes": 47247,
+      "sha256": "9f52f9892ea1613d7dd5010fbd56c13844373f492be5f069a4f8b9655e7b3733"
+    },
+    {
+      "name": "table-transposed-codes.png",
+      "bytes": 35975,
+      "sha256": "037d9173c79796bfb734b5070e744553e70c89165276cb46a0e54688e353a9b9"
+    },
+    {
+      "name": "table-transposed-duplicate-names.png",
+      "bytes": 35349,
+      "sha256": "403c2e6bbbe4c801d365e4ad19239b09a3826f8c8ee6d20000498a8a2293661d"
+    },
+    {
+      "name": "table-transposed-headerless.png",
+      "bytes": 34739,
+      "sha256": "25fc33e66269db1465cd0fdf54e3e96f02d473643a13081e51fb4b59cd287e9b"
+    },
+    {
+      "name": "table-transposed-malicious.png",
+      "bytes": 37828,
+      "sha256": "237d2fc9f564cec2f3e7bdce3d10024eadf7066c130d6d46d6b7804f1aa7d527"
+    },
+    {
+      "name": "table-transposed-partial.png",
+      "bytes": 27724,
+      "sha256": "d3be8445a0125382af8d596d5c525e2ad13db947e5b520f27e3fa4db782c9a38"
+    },
+    {
+      "name": "table-transposed-uncertain.png",
+      "bytes": 29587,
+      "sha256": "aadb4398bc57f4c4a9c88766ca492431abc337ce502fd82fb5c9984cfe3cc9cd"
+    }
+  ]
+}

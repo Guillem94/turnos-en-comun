@@ -1,0 +1,777 @@
+{
+  "schemaVersion": 1,
+  "profiles": [
+    {
+      "id": "p1",
+      "name": "Ana",
+      "color": "#256a9a"
+    },
+    {
+      "id": "p2",
+      "name": "Luis",
+      "color": "#a24c70"
+    }
+  ],
+  "entries": [
+    {
+      "id": "demo-0-2026-11-01",
+      "profileId": "p1",
+      "date": "2026-11-01",
+      "kind": "shift",
+      "start": "14:00",
+      "end": "22:00",
+      "label": "Turno T",
+      "updatedAt": "2026-10-21T12:00:00Z"
+    },
+    {
+      "id": "demo-1-2026-11-01",
+      "profileId": "p2",
+      "date": "2026-11-01",
+      "kind": "shift",
+      "start": "22:00",
+      "end": "06:00",
+      "label": "Turno N",
+      "updatedAt": "2026-10-21T12:00:00Z"
+    },
+    {
+      "id": "demo-0-2026-11-02",
+      "profileId": "p1",
+      "date": "2026-11-02",
+      "kind": "off",
+      "start": "",
+      "end": "",
+      "label": "Libre",
+      "updatedAt": "2026-10-21T12:00:00Z"
+    },
+    {
+      "id": "demo-0-2026-11-03",
+      "profileId": "p1",
+      "date": "2026-11-03",
+      "kind": "shift",
+      "start": "22:00",
+      "end": "06:00",
+      "label": "Turno N",
+      "updatedAt": "2026-10-21T12:00:00Z"
+    },
+    {
+      "id": "demo-1-2026-11-03",
+      "profileId": "p2",
+      "date": "2026-11-03",
+      "kind": "shift",
+      "start": "08:00",
+      "end": "16:00",
+      "label": "Turno M",
+      "updatedAt": "2026-10-21T12:00:00Z"
+    },
+    {
+      "id": "demo-1-2026-11-04",
+      "profileId": "p2",
+      "date": "2026-11-04",
+      "kind": "off",
+      "start": "",
+      "end": "",
+      "label": "Libre",
+      "updatedAt": "2026-10-21T12:00:00Z"
+    },
+    {
+      "id": "demo-0-2026-11-05",
+      "profileId": "p1",
+      "date": "2026-11-05",
+      "kind": "shift",
+      "start": "08:00",
+      "end": "16:00",
+      "label": "Turno M",
+      "updatedAt": "2026-10-21T12:00:00Z"
+    },
+    {
+      "id": "demo-1-2026-11-05",
+      "profileId": "p2",
+      "date": "2026-11-05",
+      "kind": "shift",
+      "start": "08:00",
+      "end": "16:00",
+      "label": "Turno M",
+      "updatedAt": "2026-10-21T12:00:00Z"
+    },
+    {
+      "id": "demo-0-2026-11-06",
+      "profileId": "p1",
+      "date": "2026-11-06",
+      "kind": "off",
+      "start": "",
+      "end": "",
+      "label": "Libre",
+      "updatedAt": "2026-10-21T12:00:00Z"
+    },
+    {
+      "id": "demo-1-2026-11-06",
+      "profileId": "p2",
+      "date": "2026-11-06",
+      "kind": "shift",
+      "start": "14:00",
+      "end": "22:00",
+      "label": "Turno T",
+      "updatedAt": "2026-10-21T12:00:00Z"
+    },
+    {
+      "id": "demo-0-2026-11-07",
+      "profileId": "p1",
+      "date": "2026-11-07",
+      "kind": "shift",
+      "start": "08:00",
+      "end": "16:00",
+      "label": "Turno M",
+      "updatedAt": "2026-10-21T12:00:00Z"
+    },
+    {
+      "id": "demo-1-2026-11-07",
+      "profileId": "p2",
+      "date": "2026-11-07",
+      "kind": "off",
+      "start": "",
+      "end": "",
+      "label": "Libre",
+      "updatedAt": "2026-10-21T12:00:00Z"
+    },
+    {
+      "id": "demo-0-2026-11-08",
+      "profileId": "p1",
+      "date": "2026-11-08",
+      "kind": "shift",
+      "start": "14:00",
+      "end": "22:00",
+      "label": "Turno T",
+      "updatedAt": "2026-10-21T12:00:00Z"
+    },
+    {
+      "id": "demo-1-2026-11-08",
+      "profileId": "p2",
+      "date": "2026-11-08",
+      "kind": "shift",
+      "start": "22:00",
+      "end": "06:00",
+      "label": "Turno N",
+      "updatedAt": "2026-10-21T12:00:00Z"
+    },
+    {
+      "id": "demo-0-2026-11-09",
+      "profileId": "p1",
+      "date": "2026-11-09",
+      "kind": "off",
+      "start": "",
+      "end": "",
+      "label": "Libre",
+      "updatedAt": "2026-10-21T12:00:00Z"
+    },
+    {
+      "id": "demo-0-2026-11-10",
+      "profileId": "p1",
+      "date": "2026-11-10",
+      "kind": "shift",
+      "start": "22:00",
+      "end": "06:00",
+      "label": "Turno N",
+      "updatedAt": "2026-10-21T12:00:00Z"
+    },
+    {
+      "id": "demo-1-2026-11-10",
+      "profileId": "p2",
+      "date": "2026-11-10",
+      "kind": "shift",
+      "start": "08:00",
+      "end": "16:00",
+      "label": "Turno M",
+      "updatedAt": "2026-10-21T12:00:00Z"
+    },
+    {
+      "id": "demo-1-2026-11-11",
+      "profileId": "p2",
+      "date": "2026-11-11",
+      "kind": "off",
+      "start": "",
+      "end": "",
+      "label": "Libre",
+      "updatedAt": "2026-10-21T12:00:00Z"
+    },
+    {
+      "id": "demo-0-2026-11-12",
+      "profileId": "p1",
+      "date": "2026-11-12",
+      "kind": "shift",
+      "start": "08:00",
+      "end": "16:00",
+      "label": "Turno M",
+      "updatedAt": "2026-10-21T12:00:00Z"
+    },
+    {
+      "id": "demo-1-2026-11-12",
+      "profileId": "p2",
+      "date": "2026-11-12",
+      "kind": "shift",
+      "start": "08:00",
+      "end": "16:00",
+      "label": "Turno M",
+      "updatedAt": "2026-10-21T12:00:00Z"
+    },
+    {
+      "id": "demo-0-2026-11-13",
+      "profileId": "p1",
+      "date": "2026-11-13",
+      "kind": "off",
+      "start": "",
+      "end": "",
+      "label": "Libre",
+      "updatedAt": "2026-10-21T12:00:00Z"
+    },
+    {
+      "id": "demo-1-2026-11-13",
+      "profileId": "p2",
+      "date": "2026-11-13",
+      "kind": "shift",
+      "start": "14:00",
+      "end": "22:00",
+      "label": "Turno T",
+      "updatedAt": "2026-10-21T12:00:00Z"
+    },
+    {
+      "id": "demo-0-2026-11-14",
+      "profileId": "p1",
+      "date": "2026-11-14",
+      "kind": "shift",
+      "start": "08:00",
+      "end": "16:00",
+      "label": "Turno M",
+      "updatedAt": "2026-10-21T12:00:00Z"
+    },
+    {
+      "id": "demo-1-2026-11-14",
+      "profileId": "p2",
+      "date": "2026-11-14",
+      "kind": "off",
+      "start": "",
+      "end": "",
+      "label": "Libre",
+      "updatedAt": "2026-10-21T12:00:00Z"
+    },
+    {
+      "id": "demo-0-2026-11-15",
+      "profileId": "p1",
+      "date": "2026-11-15",
+      "kind": "shift",
+      "start": "14:00",
+      "end": "22:00",
+      "label": "Turno T",
+      "updatedAt": "2026-10-21T12:00:00Z"
+    },
+    {
+      "id": "demo-1-2026-11-15",
+      "profileId": "p2",
+      "date": "2026-11-15",
+      "kind": "shift",
+      "start": "22:00",
+      "end": "06:00",
+      "label": "Turno N",
+      "updatedAt": "2026-10-21T12:00:00Z"
+    },
+    {
+      "id": "demo-0-2026-11-16",
+      "profileId": "p1",
+      "date": "2026-11-16",
+      "kind": "off",
+      "start": "",
+      "end": "",
+      "label": "Libre",
+      "updatedAt": "2026-10-21T12:00:00Z"
+    },
+    {
+      "id": "demo-0-2026-11-17",
+      "profileId": "p1",
+      "date": "2026-11-17",
+      "kind": "shift",
+      "start": "22:00",
+      "end": "06:00",
+      "label": "Turno N",
+      "updatedAt": "2026-10-21T12:00:00Z"
+    },
+    {
+      "id": "demo-1-2026-11-17",
+      "profileId": "p2",
+      "date": "2026-11-17",
+      "kind": "shift",
+      "start": "08:00",
+      "end": "16:00",
+      "label": "Turno M",
+      "updatedAt": "2026-10-21T12:00:00Z"
+    },
+    {
+      "id": "demo-1-2026-11-18",
+      "profileId": "p2",
+      "date": "2026-11-18",
+      "kind": "off",
+      "start": "",
+      "end": "",
+      "label": "Libre",
+      "updatedAt": "2026-10-21T12:00:00Z"
+    },
+    {
+      "id": "demo-0-2026-11-19",
+      "profileId": "p1",
+      "date": "2026-11-19",
+      "kind": "shift",
+      "start": "08:00",
+      "end": "16:00",
+      "label": "Turno M",
+      "updatedAt": "2026-10-21T12:00:00Z"
+    },
+    {
+      "id": "demo-1-2026-11-19",
+      "profileId": "p2",
+      "date": "2026-11-19",
+      "kind": "shift",
+      "start": "08:00",
+      "end": "16:00",
+      "label": "Turno M",
+      "updatedAt": "2026-10-21T12:00:00Z"
+    },
+    {
+      "id": "demo-0-2026-11-20",
+      "profileId": "p1",
+      "date": "2026-11-20",
+      "kind": "off",
+      "start": "",
+      "end": "",
+      "label": "Libre",
+      "updatedAt": "2026-10-21T12:00:00Z"
+    },
+    {
+      "id": "demo-1-2026-11-20",
+      "profileId": "p2",
+      "date": "2026-11-20",
+      "kind": "shift",
+      "start": "14:00",
+      "end": "22:00",
+      "label": "Turno T",
+      "updatedAt": "2026-10-21T12:00:00Z"
+    },
+    {
+      "id": "demo-0-2026-11-21",
+      "profileId": "p1",
+      "date": "2026-11-21",
+      "kind": "shift",
+      "start": "08:00",
+      "end": "16:00",
+      "label": "Turno M",
+      "updatedAt": "2026-10-21T12:00:00Z"
+    },
+    {
+      "id": "demo-1-2026-11-21",
+      "profileId": "p2",
+      "date": "2026-11-21",
+      "kind": "off",
+      "start": "",
+      "end": "",
+      "label": "Libre",
+      "updatedAt": "2026-10-21T12:00:00Z"
+    },
+    {
+      "id": "demo-0-2026-11-22",
+      "profileId": "p1",
+      "date": "2026-11-22",
+      "kind": "shift",
+      "start": "14:00",
+      "end": "22:00",
+      "label": "Turno T",
+      "updatedAt": "2026-10-21T12:00:00Z"
+    },
+    {
+      "id": "demo-1-2026-11-22",
+      "profileId": "p2",
+      "date": "2026-11-22",
+      "kind": "shift",
+      "start": "22:00",
+      "end": "06:00",
+      "label": "Turno N",
+      "updatedAt": "2026-10-21T12:00:00Z"
+    },
+    {
+      "id": "demo-0-2026-11-23",
+      "profileId": "p1",
+      "date": "2026-11-23",
+      "kind": "off",
+      "start": "",
+      "end": "",
+      "label": "Libre",
+      "updatedAt": "2026-10-21T12:00:00Z"
+    },
+    {
+      "id": "demo-0-2026-11-24",
+      "profileId": "p1",
+      "date": "2026-11-24",
+      "kind": "shift",
+      "start": "22:00",
+      "end": "06:00",
+      "label": "Turno N",
+      "updatedAt": "2026-10-21T12:00:00Z"
+    },
+    {
+      "id": "demo-1-2026-11-24",
+      "profileId": "p2",
+      "date": "2026-11-24",
+      "kind": "shift",
+      "start": "08:00",
+      "end": "16:00",
+      "label": "Turno M",
+      "updatedAt": "2026-10-21T12:00:00Z"
+    },
+    {
+      "id": "demo-1-2026-11-25",
+      "profileId": "p2",
+      "date": "2026-11-25",
+      "kind": "off",
+      "start": "",
+      "end": "",
+      "label": "Libre",
+      "updatedAt": "2026-10-21T12:00:00Z"
+    },
+    {
+      "id": "demo-0-2026-11-26",
+      "profileId": "p1",
+      "date": "2026-11-26",
+      "kind": "shift",
+      "start": "08:00",
+      "end": "16:00",
+      "label": "Turno M",
+      "updatedAt": "2026-10-21T12:00:00Z"
+    },
+    {
+      "id": "demo-1-2026-11-26",
+      "profileId": "p2",
+      "date": "2026-11-26",
+      "kind": "shift",
+      "start": "08:00",
+      "end": "16:00",
+      "label": "Turno M",
+      "updatedAt": "2026-10-21T12:00:00Z"
+    },
+    {
+      "id": "demo-0-2026-11-27",
+      "profileId": "p1",
+      "date": "2026-11-27",
+      "kind": "off",
+      "start": "",
+      "end": "",
+      "label": "Libre",
+      "updatedAt": "2026-10-21T12:00:00Z"
+    },
+    {
+      "id": "demo-1-2026-11-27",
+      "profileId": "p2",
+      "date": "2026-11-27",
+      "kind": "shift",
+      "start": "14:00",
+      "end": "22:00",
+      "label": "Turno T",
+      "updatedAt": "2026-10-21T12:00:00Z"
+    },
+    {
+      "id": "demo-0-2026-11-28",
+      "profileId": "p1",
+      "date": "2026-11-28",
+      "kind": "shift",
+      "start": "08:00",
+      "end": "16:00",
+      "label": "Turno M",
+      "updatedAt": "2026-10-21T12:00:00Z"
+    },
+    {
+      "id": "demo-1-2026-11-28",
+      "profileId": "p2",
+      "date": "2026-11-28",
+      "kind": "off",
+      "start": "",
+      "end": "",
+      "label": "Libre",
+      "updatedAt": "2026-10-21T12:00:00Z"
+    },
+    {
+      "id": "demo-0-2026-11-29",
+      "profileId": "p1",
+      "date": "2026-11-29",
+      "kind": "shift",
+      "start": "14:00",
+      "end": "22:00",
+      "label": "Turno T",
+      "updatedAt": "2026-10-21T12:00:00Z"
+    },
+    {
+      "id": "demo-1-2026-11-29",
+      "profileId": "p2",
+      "date": "2026-11-29",
+      "kind": "shift",
+      "start": "22:00",
+      "end": "06:00",
+      "label": "Turno N",
+      "updatedAt": "2026-10-21T12:00:00Z"
+    },
+    {
+      "id": "demo-0-2026-11-30",
+      "profileId": "p1",
+      "date": "2026-11-30",
+      "kind": "off",
+      "start": "",
+      "end": "",
+      "label": "Libre",
+      "updatedAt": "2026-10-21T12:00:00Z"
+    }
+  ],
+  "coverage": [
+    {
+      "profileId": "p1",
+      "date": "2026-11-01"
+    },
+    {
+      "profileId": "p2",
+      "date": "2026-11-01"
+    },
+    {
+      "profileId": "p1",
+      "date": "2026-11-02"
+    },
+    {
+      "profileId": "p2",
+      "date": "2026-11-02"
+    },
+    {
+      "profileId": "p1",
+      "date": "2026-11-03"
+    },
+    {
+      "profileId": "p2",
+      "date": "2026-11-03"
+    },
+    {
+      "profileId": "p1",
+      "date": "2026-11-04"
+    },
+    {
+      "profileId": "p2",
+      "date": "2026-11-04"
+    },
+    {
+      "profileId": "p1",
+      "date": "2026-11-05"
+    },
+    {
+      "profileId": "p2",
+      "date": "2026-11-05"
+    },
+    {
+      "profileId": "p1",
+      "date": "2026-11-06"
+    },
+    {
+      "profileId": "p2",
+      "date": "2026-11-06"
+    },
+    {
+      "profileId": "p1",
+      "date": "2026-11-07"
+    },
+    {
+      "profileId": "p2",
+      "date": "2026-11-07"
+    },
+    {
+      "profileId": "p1",
+      "date": "2026-11-08"
+    },
+    {
+      "profileId": "p2",
+      "date": "2026-11-08"
+    },
+    {
+      "profileId": "p1",
+      "date": "2026-11-09"
+    },
+    {
+      "profileId": "p2",
+      "date": "2026-11-09"
+    },
+    {
+      "profileId": "p1",
+      "date": "2026-11-10"
+    },
+    {
+      "profileId": "p2",
+      "date": "2026-11-10"
+    },
+    {
+      "profileId": "p1",
+      "date": "2026-11-11"
+    },
+    {
+      "profileId": "p2",
+      "date": "2026-11-11"
+    },
+    {
+      "profileId": "p1",
+      "date": "2026-11-12"
+    },
+    {
+      "profileId": "p2",
+      "date": "2026-11-12"
+    },
+    {
+      "profileId": "p1",
+      "date": "2026-11-13"
+    },
+    {
+      "profileId": "p2",
+      "date": "2026-11-13"
+    },
+    {
+      "profileId": "p1",
+      "date": "2026-11-14"
+    },
+    {
+      "profileId": "p2",
+      "date": "2026-11-14"
+    },
+    {
+      "profileId": "p1",
+      "date": "2026-11-15"
+    },
+    {
+      "profileId": "p2",
+      "date": "2026-11-15"
+    },
+    {
+      "profileId": "p1",
+      "date": "2026-11-16"
+    },
+    {
+      "profileId": "p2",
+      "date": "2026-11-16"
+    },
+    {
+      "profileId": "p1",
+      "date": "2026-11-17"
+    },
+    {
+      "profileId": "p2",
+      "date": "2026-11-17"
+    },
+    {
+      "profileId": "p1",
+      "date": "2026-11-18"
+    },
+    {
+      "profileId": "p2",
+      "date": "2026-11-18"
+    },
+    {
+      "profileId": "p1",
+      "date": "2026-11-19"
+    },
+    {
+      "profileId": "p2",
+      "date": "2026-11-19"
+    },
+    {
+      "profileId": "p1",
+      "date": "2026-11-20"
+    },
+    {
+      "profileId": "p2",
+      "date": "2026-11-20"
+    },
+    {
+      "profileId": "p1",
+      "date": "2026-11-21"
+    },
+    {
+      "profileId": "p2",
+      "date": "2026-11-21"
+    },
+    {
+      "profileId": "p1",
+      "date": "2026-11-22"
+    },
+    {
+      "profileId": "p2",
+      "date": "2026-11-22"
+    },
+    {
+      "profileId": "p1",
+      "date": "2026-11-23"
+    },
+    {
+      "profileId": "p2",
+      "date": "2026-11-23"
+    },
+    {
+      "profileId": "p1",
+      "date": "2026-11-24"
+    },
+    {
+      "profileId": "p2",
+      "date": "2026-11-24"
+    },
+    {
+      "profileId": "p1",
+      "date": "2026-11-25"
+    },
+    {
+      "profileId": "p2",
+      "date": "2026-11-25"
+    },
+    {
+      "profileId": "p1",
+      "date": "2026-11-26"
+    },
+    {
+      "profileId": "p2",
+      "date": "2026-11-26"
+    },
+    {
+      "profileId": "p1",
+      "date": "2026-11-27"
+    },
+    {
+      "profileId": "p2",
+      "date": "2026-11-27"
+    },
+    {
+      "profileId": "p1",
+      "date": "2026-11-28"
+    },
+    {
+      "profileId": "p2",
+      "date": "2026-11-28"
+    },
+    {
+      "profileId": "p1",
+      "date": "2026-11-29"
+    },
+    {
+      "profileId": "p2",
+      "date": "2026-11-29"
+    },
+    {
+      "profileId": "p1",
+      "date": "2026-11-30"
+    },
+    {
+      "profileId": "p2",
+      "date": "2026-11-30"
+    }
+  ],
+  "settings": {
+    "timezone": "Europe/Madrid",
+    "windowStart": "07:00",
+    "windowEnd": "23:00",
+    "minMinutes": 30,
+    "assumeFree": false
+  },
+  "onboarded": true
+}

@@ -1,0 +1,5 @@
+# Preserve verbatim third-party notices and source evidence across Windows checkouts.
+legal/third-party/** -text
+docs/oss/source-evidence/** -text
+vendor/** -text
+legal/sources/** -text
