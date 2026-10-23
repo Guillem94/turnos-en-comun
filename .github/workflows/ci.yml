@@ -36,3 +36,7 @@ jobs:
         run: npm test
       - name: Compilar aplicación y recursos locales
         run: npm run build
+      - name: Instalar Chromium y dependencias en el runner
+        run: npx --no-install playwright install --with-deps chromium
+      - name: Pruebas E2E Chromium
+        run: npm run test:e2e

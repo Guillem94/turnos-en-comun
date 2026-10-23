@@ -56,6 +56,7 @@ for (const name of [
   "playwright.config.js",
   ".gitignore",
   ".gitattributes",
+  ".github/workflows/ci.yml",
   "LICENSE",
   "THIRD-PARTY-NOTICES.md",
 ])
@@ -84,6 +85,7 @@ const mappings = {
   "DISTRIBUTION.md": "docs/DISTRIBUTION.md",
   "TESTING.md": "docs/TESTING.md",
   "VALIDATION.md": "docs/VALIDATION.md",
+  "MOBILE-CHECKLIST.md": "docs/MOBILE-CHECKLIST.md",
   "CONTRIBUTING.md": "CONTRIBUTING.md",
   "SECURITY.md": "SECURITY.md",
   "LICENSE-DECISION.md": "LICENSE-DECISION.md",

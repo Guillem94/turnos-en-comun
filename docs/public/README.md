@@ -2,7 +2,7 @@
 
 Organiza los turnos de dos personas y encuentra tiempo libre en común. Interfaz en español, calendario mensual/semanal, noches, días libres, recuperación, exportación ICS y copias JSON. Los datos se guardan en este navegador; no hay cuentas, sincronización entre dispositivos, push o telemetría.
 
-**Candidato local 0.5.0, todavía sin publicar.** Código propio bajo [MIT](LICENSE), Copyright (c) 2026 Guillem Carrion. Las bibliotecas de terceros conservan sus condiciones, detalladas en [THIRD-PARTY-NOTICES.md](THIRD-PARTY-NOTICES.md). La elección de licencia no implica que se haya publicado o enviado una candidatura.
+**Versión 0.5.0 publicada en [Guillem94/turnos-en-comun](https://github.com/Guillem94/turnos-en-comun).** Código propio bajo [MIT](LICENSE), Copyright (c) 2026 Guillem Carrion. Las bibliotecas de terceros conservan sus condiciones, detalladas en [THIRD-PARTY-NOTICES.md](THIRD-PARTY-NOTICES.md). No se ha enviado ninguna candidatura.
 
 ## Arrancar
 
@@ -30,4 +30,4 @@ ICS es exportación manual para importar en el móvil, sin sincronización. Expo
 
 React/Vite, dominio y parsers separados; sin servidor de datos. [Arquitectura, límites, licencias y sustitución del codec](docs/DISTRIBUTION.md). [Pruebas reproducibles](docs/TESTING.md). [Contribución](CONTRIBUTING.md). El proyecto no depende de servicios de desarrollo o aplicaciones privadas.
 
-Destino público y aceptación en móviles físicos siguen pendientes. private:true impide una publicación npm accidental; no es una declaración de visibilidad de un repositorio Git. No se afirma adopción externa ni selección en programas.
+La CI está activa en [GitHub Actions](https://github.com/Guillem94/turnos-en-comun/actions). El workflow comprueba formato, pruebas Node, compilación y la suite E2E con Chromium. Consulta allí el resultado del commit concreto: esta descripción no acredita que el incremento E2E ya haya pasado en CI. La aceptación en móviles físicos sigue pendiente; registra las pruebas reales con el [checklist móvil](docs/MOBILE-CHECKLIST.md). private:true impide una publicación npm accidental; no es una declaración de visibilidad de un repositorio Git. No se afirma adopción externa ni selección en programas.

@@ -1,4 +1,4 @@
-# Validación del candidato local 0.5.0
+# Validación histórica del candidato local 0.5.0 — 22/10/2026
 
 Ejecución del 22/10/2026 en Windows con Node 24.18.0, npm 11.16.0 y Microsoft Edge mediante Playwright. Solo datos y calendarios ficticios. Estos resultados corresponden a fixtures finitos, no a precisión universal de OCR ni a aceptación en teléfonos físicos.
 
@@ -24,4 +24,4 @@ Las pruebas restringen peticiones del contexto del navegador. El equipo de ejecu
 
 No se recompiló el codec nativo ni se afirma reproducibilidad binaria de Emscripten, certificación jurídica o compatibilidad con todo HEIC/TIFF. HDR/10 bits/Live Photos, todas las variantes de animación y manuscritos/solo colores no están certificados. PDF/SVG/RAW y los formatos excluidos en DISTRIBUTION.md siguen excluidos. Falta aceptación física e importación ICS en teléfonos reales.
 
-Comandos reproducibles en TESTING.md. Estos resultados no prueban adopción externa, elegibilidad o selección en un programa. El repositorio y el paquete se han preparado localmente; no se ha publicado ni enviado candidatura.
+Comandos reproducibles en TESTING.md. Estos resultados no prueban adopción externa, elegibilidad o selección en un programa. Estos resultados históricos corresponden al candidato local del 22/10/2026. El repositorio está publicado en [Guillem94/turnos-en-comun](https://github.com/Guillem94/turnos-en-comun); consultar [Actions](https://github.com/Guillem94/turnos-en-comun/actions) para el estado actual por commit. Esta tabla no acredita ejecuciones nuevas ni el resultado del incremento E2E en CI. No se ha enviado ninguna candidatura.

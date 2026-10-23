@@ -9,8 +9,8 @@
     },
     {
       "path": ".github/workflows/ci.yml",
-      "bytes": 1012,
-      "sha256": "07aa92071d8460c887fb5555a3e3fa5b1eb30a3c6370e9c48e95213ff37ca0c7"
+      "bytes": 1207,
+      "sha256": "f2581480abd6fd3f317350eefca18a249f8ee00b659988a3f6577784838fefab"
     },
     {
       "path": ".gitignore",
@@ -54,8 +54,8 @@
     },
     {
       "path": "docs/public/README.md",
-      "bytes": 3130,
-      "sha256": "2fe5428a1c27a4f266e4422ad165612192eaa2427550723b627e43bbd06fa430"
+      "bytes": 3507,
+      "sha256": "e6d611632e5490226a91197aafe3b0108598979e494be3a7a4e93bfed0caa3d4"
     },
     {
       "path": "docs/public/SECURITY.md",
@@ -64,23 +64,28 @@
     },
     {
       "path": "docs/public/TESTING.md",
-      "bytes": 3410,
-      "sha256": "a613674ca8a9ecc8b917a4eca65d12555d4a20befb9ae9b4b17815eee584610a"
+      "bytes": 5162,
+      "sha256": "8be30e9fe68b331026821afa3138edc0a0e958dbef6984449669321dbd6f9d75"
     },
     {
       "path": "docs/public/VALIDATION.md",
-      "bytes": 3527,
-      "sha256": "6145e60ab0f6f73aca89f4a8610ba2890a4e0f00d53deeb25372afd4e40919e8"
+      "bytes": 3868,
+      "sha256": "018e6493141d2f38617c9ff34e836e70e2e1099885bc7d1f92b143094e6e85fa"
+    },
+    {
+      "path": "docs/MOBILE-CHECKLIST.md",
+      "bytes": 2439,
+      "sha256": "c2bbb6601db3c32335c18caa0eb17cbc20abb38c87f7dc4c05e82d75423145c2"
     },
     {
       "path": "docs/TESTING.md",
-      "bytes": 3410,
-      "sha256": "a613674ca8a9ecc8b917a4eca65d12555d4a20befb9ae9b4b17815eee584610a"
+      "bytes": 5162,
+      "sha256": "8be30e9fe68b331026821afa3138edc0a0e958dbef6984449669321dbd6f9d75"
     },
     {
       "path": "docs/VALIDATION.md",
-      "bytes": 3527,
-      "sha256": "6145e60ab0f6f73aca89f4a8610ba2890a4e0f00d53deeb25372afd4e40919e8"
+      "bytes": 3868,
+      "sha256": "018e6493141d2f38617c9ff34e836e70e2e1099885bc7d1f92b143094e6e85fa"
     },
     {
       "path": "examples/calendario-jpeg.tiff",
@@ -379,8 +384,8 @@
     },
     {
       "path": "playwright.config.js",
-      "bytes": 613,
-      "sha256": "d31fb6a851df23ca58e326bd5d9038d08e75f35333606c7ae47c3a3edfc1cbcb"
+      "bytes": 721,
+      "sha256": "05a29efa2c5e017d59de5ade4e573322201b1986cabc763e536a8e4aff9f8865"
     },
     {
       "path": "public/demo-ficticia.json",
@@ -394,8 +399,8 @@
     },
     {
       "path": "README.md",
-      "bytes": 3277,
-      "sha256": "8bdf8592017dff2818e44e1bd927e4a3d093d83c432e2911dea0322788a28e81"
+      "bytes": 3507,
+      "sha256": "e6d611632e5490226a91197aafe3b0108598979e494be3a7a4e93bfed0caa3d4"
     },
     {
       "path": "scripts/encode-fixture-worker.mjs",
@@ -404,8 +409,8 @@
     },
     {
       "path": "scripts/export-candidate.mjs",
-      "bytes": 4823,
-      "sha256": "67c0597c55f6c26776d76ff9b611093a355b05e3b4fab299e5c878ce80a3cd83"
+      "bytes": 4906,
+      "sha256": "128775fdecc0989c947dc0c9e03fc11c6a3461b0955874a2dcf42731b8795471"
     },
     {
       "path": "scripts/fixture-manifest.mjs",
@@ -881,6 +886,11 @@
       "path": "vendor/utif/UTIF.mjs",
       "bytes": 46820,
       "sha256": "6880f53f911408eba26e07fea021b163f6d9ea7317dc7cf88dafa504fb5184d5"
+    },
+    {
+      "path": "docs/public/MOBILE-CHECKLIST.md",
+      "bytes": 2439,
+      "sha256": "c2bbb6601db3c32335c18caa0eb17cbc20abb38c87f7dc4c05e82d75423145c2"
     }
   ],
   "exportedByAllowlist": true,
