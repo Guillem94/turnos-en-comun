@@ -389,8 +389,8 @@
     },
     {
       "path": "README.md",
-      "bytes": 3130,
-      "sha256": "2fe5428a1c27a4f266e4422ad165612192eaa2427550723b627e43bbd06fa430"
+      "bytes": 3277,
+      "sha256": "8bdf8592017dff2818e44e1bd927e4a3d093d83c432e2911dea0322788a28e81"
     },
     {
       "path": "scripts/encode-fixture-worker.mjs",
