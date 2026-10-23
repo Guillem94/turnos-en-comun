@@ -1,0 +1,38 @@
+name: Pruebas y build
+
+"on":
+  push:
+    branches: [main]
+  pull_request:
+    branches: [main]
+  workflow_dispatch: {}
+
+permissions:
+  contents: read
+
+concurrency:
+  group: ${{ github.workflow }}-${{ github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  test-build:
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    steps:
+      - name: Obtener código
+        uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7
+        with:
+          persist-credentials: false
+      - name: Preparar Node
+        uses: actions/setup-node@949feb2413d6458794dcd2491c4babbbce0c15c1 # v7
+        with:
+          node-version: "24.18.0"
+          package-manager-cache: false
+      - name: Instalar dependencias fijadas
+        run: npm ci --ignore-scripts --registry=https://registry.npmjs.org --no-audit --no-fund
+      - name: Comprobar formato
+        run: npm run format:check
+      - name: Pruebas Node
+        run: npm test
+      - name: Compilar aplicación y recursos locales
+        run: npm run build
