@@ -689,8 +689,8 @@
     },
     {
       "path": "tests/import-context.spec.js",
-      "bytes": 4550,
-      "sha256": "7c0a67e926e5834b0f07b3111fa5cf803a488b5c2df91ca443978dedad11a6fa"
+      "bytes": 5975,
+      "sha256": "2d5a16c3b63e5571719ee7700cd8deee64186700a9ac5c500b301355abcf7e98"
     },
     {
       "path": "tests/import-edgecases.test.mjs",
@@ -699,8 +699,8 @@
     },
     {
       "path": "tests/import-formats.spec.js",
-      "bytes": 5384,
-      "sha256": "473b9f3bd3c82994370d34bb34a3b88d15983329daee435bbb8d1d1ed6e3ccbd"
+      "bytes": 8778,
+      "sha256": "24183216cda7a15aed7fce08185344231473b4d7b7040c63730d711d7a80af77"
     },
     {
       "path": "tests/import-layout.test.mjs",

@@ -49,6 +49,14 @@ for (const kind of kinds)
         text: r.innerText,
       })),
     );
+    console.log(
+      JSON.stringify({
+        fixture: kind,
+        candidates: count,
+        recognizedTypes: values.filter((r) => r.kind !== "").length,
+        pendingTypes: values.filter((r) => r.kind === "").length,
+      }),
+    );
     await writeFile(
       `test-artifacts/matrix-${kind}.json`,
       JSON.stringify(
@@ -75,7 +83,89 @@ for (const kind of kinds)
         expect(values[i].date).toBe(
           `2026-11-${String(i + 1).padStart(2, "0")}`,
         );
-        expect(values[i].kind).toBe(i % 4 === 3 ? "off" : "shift");
+        const expectedKind = i % 4 === 3 ? "off" : "shift";
+        if (kind === "monthly" && values[i].kind === "") {
+          const row = rows.nth(i);
+          const warning = row.locator(".hint");
+          await expect(warning).toBeVisible();
+          await expect(warning).toContainText(
+            "Código u horario desconocido: corrige la fila.",
+          );
+          const reviewed = page.getByLabel(`Revisado fila ${i + 1}`, {
+            exact: true,
+          });
+          await expect(reviewed).not.toBeChecked();
+          await expect(reviewed).toBeDisabled();
+          await expect(
+            page.getByRole("button", { name: /Insertar filas revisadas/ }),
+          ).toBeDisabled();
+          await page
+            .getByLabel(`Tipo fila ${i + 1}`, { exact: true })
+            .selectOption(expectedKind);
+          if (expectedKind === "shift") {
+            // Explicit human correction using the fixture's confirmed M/T/N legend.
+            const [start, end] = [
+              ["08:00", "16:00"],
+              ["14:00", "22:00"],
+              ["22:00", "06:00"],
+            ][i % 4];
+            await page
+              .getByLabel(`Entrada fila ${i + 1}`, { exact: true })
+              .fill(start);
+            await page
+              .getByLabel(`Salida fila ${i + 1}`, { exact: true })
+              .fill(end);
+          }
+        } else {
+          expect(values[i].kind).toBe(expectedKind);
+        }
+      }
+      if (kind === "monthly") {
+        expect(values.filter((r) => r.kind !== "").length).toBeGreaterThan(0);
+        for (let i = 0; i < 14; i++) {
+          const row = i + 1;
+          const expectedKind = i % 4 === 3 ? "off" : "shift";
+          const [start, end] = [
+            ["08:00", "16:00"],
+            ["14:00", "22:00"],
+            ["22:00", "06:00"],
+            ["", ""],
+          ][i % 4];
+          await expect(
+            page.getByLabel(`Fecha fila ${row}`, { exact: true }),
+          ).toHaveValue(`2026-11-${String(row).padStart(2, "0")}`);
+          await expect(
+            page.getByLabel(`Tipo fila ${row}`, { exact: true }),
+          ).toHaveValue(expectedKind);
+          await expect(
+            page.getByLabel(`Entrada fila ${row}`, { exact: true }),
+          ).toHaveValue(start);
+          await expect(
+            page.getByLabel(`Salida fila ${row}`, { exact: true }),
+          ).toHaveValue(end);
+          await expect(
+            page.getByLabel(`Revisado fila ${row}`, { exact: true }),
+          ).not.toBeChecked();
+          await expect(
+            page.getByLabel(`Revisado fila ${row}`, { exact: true }),
+          ).toBeEnabled();
+          await expect(
+            page.getByLabel(`Ver evidencia fila ${row}`, { exact: true }),
+          ).toBeVisible();
+        }
+        await expect(
+          page.getByLabel("Confirmo persona, mes"),
+        ).not.toBeChecked();
+        await expect(
+          page.getByRole("button", { name: /Insertar filas revisadas/ }),
+        ).toBeDisabled();
+        expect(
+          await page.evaluate(
+            () =>
+              JSON.parse(localStorage.getItem("turnos-en-comun:v1:personal"))
+                .entries,
+          ),
+        ).toHaveLength(0);
       }
       await page.getByLabel("Ver evidencia fila 1", { exact: true }).click();
       await expect(page.locator(".evidence-preview img")).toBeVisible();

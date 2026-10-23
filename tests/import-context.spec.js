@@ -62,36 +62,68 @@ for (const variant of ["crop", "rotate90", "jpeg", "webp"])
       page.getByRole("button", { name: "Analizar en este dispositivo" }),
     ).toBeEnabled({ timeout: 150000 });
     await expect(page.locator(".preview-table tbody tr")).toHaveCount(14);
-    if (["crop", "rotate90"].includes(variant)) {
-      expect(
-        await page
-          .locator('.preview-table input[type="date"]')
-          .evaluateAll((inputs) => inputs.map((i) => i.value)),
-      ).toEqual(
-        Array.from({ length: 14 }, (_, i) =>
-          [0, 10].includes(i)
-            ? ""
-            : `2026-11-${String(i + 1).padStart(2, "0")}`,
-        ),
-      );
-      await expect(
-        page.getByLabel("Fecha fila 1", { exact: true }),
-      ).toHaveValue("");
-      await expect(
-        page
-          .getByText("Fecha repetida en celdas mensuales distintas", {
-            exact: false,
-          })
-          .first(),
-      ).toBeVisible();
-      await page.getByLabel("Fecha fila 1", { exact: true }).fill("2026-11-01");
-      await page
-        .getByLabel("Fecha fila 11", { exact: true })
-        .fill("2026-11-11");
-    }
-    await expect(page.getByLabel("Fecha fila 1", { exact: true })).toHaveValue(
-      "2026-11-01",
+    const expectedDates = Array.from(
+      { length: 14 },
+      (_, i) => `2026-11-${String(i + 1).padStart(2, "0")}`,
     );
+    const dates = page.locator('.preview-table input[type="date"]');
+    const initialDates = await dates.evaluateAll((inputs) =>
+      inputs.map((i) => i.value),
+    );
+    console.log(
+      JSON.stringify({
+        fixture: `context-${variant}`,
+        candidates: initialDates.length,
+        recognizedDates: initialDates.filter(Boolean).length,
+        pendingDates: initialDates.filter((date) => !date).length,
+      }),
+    );
+    const insert = page.getByRole("button", {
+      name: /Insertar filas revisadas/,
+    });
+    const beforeCancel = await page.evaluate(() =>
+      localStorage.getItem("turnos-en-comun:v1:personal"),
+    );
+    if (["crop", "rotate90"].includes(variant)) {
+      const pendingDates = expectedDates.map((date, i) =>
+        [0, 10].includes(i) ? "" : date,
+      );
+      // Accept a correct reading, not a mandatory historical OCR mistake.
+      expect([expectedDates, pendingDates]).toContainEqual(initialDates);
+      if (initialDates.includes("")) {
+        await expect(
+          page
+            .getByText("Fecha repetida en celdas mensuales distintas", {
+              exact: false,
+            })
+            .first(),
+        ).toBeVisible();
+        for (const row of [1, 11]) {
+          await expect(
+            page.getByLabel(`Revisado fila ${row}`, { exact: true }),
+          ).not.toBeChecked();
+          await expect(
+            page.getByLabel(`Revisado fila ${row}`, { exact: true }),
+          ).toBeDisabled();
+        }
+        expect(JSON.parse(beforeCancel).entries).toHaveLength(0);
+        await expect(insert).toBeDisabled();
+        await page
+          .getByLabel("Fecha fila 1", { exact: true })
+          .fill("2026-11-01");
+        await page
+          .getByLabel("Fecha fila 11", { exact: true })
+          .fill("2026-11-11");
+      }
+    }
+    expect(
+      await dates.evaluateAll((inputs) => inputs.map((i) => i.value)),
+    ).toEqual(expectedDates);
+    for (let row = 1; row <= 14; row++)
+      await expect(
+        page.getByLabel(`Revisado fila ${row}`, { exact: true }),
+      ).not.toBeChecked();
+    await expect(insert).toBeDisabled();
     expect(
       await page.evaluate(
         () =>
@@ -100,6 +132,11 @@ for (const variant of ["crop", "rotate90", "jpeg", "webp"])
       ),
     ).toBe(0);
     await page.getByRole("button", { name: "Cancelar importación" }).click();
+    expect(
+      await page.evaluate(() =>
+        localStorage.getItem("turnos-en-comun:v1:personal"),
+      ),
+    ).toBe(beforeCancel);
   });
 test("SVG ejecutable es rechazado sin decodificar ni ejecutar", async ({
   page,
