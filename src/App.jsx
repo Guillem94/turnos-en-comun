@@ -502,7 +502,11 @@ export default function App() {
               fechas se conservan como horas locales
             </span>
             <span>Vuestros datos se quedan aquí.</span>
-            <a href="/legal/index.html" target="_blank" rel="noreferrer">
+            <a
+              href={`${import.meta.env.BASE_URL}legal/index.html`}
+              target="_blank"
+              rel="noreferrer"
+            >
               Licencias y fuentes
             </a>
           </footer>

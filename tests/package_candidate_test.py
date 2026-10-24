@@ -57,6 +57,15 @@ class PackagingTests(unittest.TestCase):
         with self.assertRaisesRegex(ValueError, 'EXTERNAL_HTML_LINK'):
             package.verify_html_links(web)
 
+    def test_legal_home_and_exact_public_source_link_are_allowed(self):
+        web = {'index.html': b'', 'legal/index.html': b'<a href="../">Inicio</a><a href="https://github.com/Guillem94/turnos-en-comun">Fuentes</a>'}
+        package.verify_html_links(web)
+
+    def test_relative_escape_and_external_script_are_rejected(self):
+        for html, error in [(b'<a href="../../outside">escape</a>', 'UNSAFE_PATH'), (b'<script src="https://github.com/Guillem94/turnos-en-comun"></script>', 'EXTERNAL_HTML_LINK')]:
+            with self.subTest(html=html), self.assertRaisesRegex(ValueError, error):
+                package.verify_html_links({'index.html': b'', 'legal/index.html': html})
+
     def test_zip_has_exact_frozen_bytes_and_cannot_overwrite(self):
         with local_temp() as folder:
             target = pathlib.Path(folder) / 'snapshot.zip'

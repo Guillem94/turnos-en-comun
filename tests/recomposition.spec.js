@@ -180,7 +180,10 @@ test("avisos y cuatro fuentes nativas acompañan al build y son accesibles", asy
   const links = await legal
     .locator("a")
     .evaluateAll((nodes) => nodes.map((n) => n.href));
+  const publicSource = "https://github.com/Guillem94/turnos-en-comun";
+  expect(links).toContain(publicSource);
   for (const href of links) {
+    if (href === publicSource) continue;
     expect(new URL(href).origin).toBe("http://127.0.0.1:5179");
     expect((await legal.request.get(href)).status()).toBe(200);
   }

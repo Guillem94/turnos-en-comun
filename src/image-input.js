@@ -34,10 +34,17 @@ export async function openImageInput(file, signal) {
   signal?.addEventListener("abort", close, { once: true });
   worker.onmessage = ({ data }) => {
     const p = pending.get(data.id);
-    if (!p) return;
+    if (!p) {
+      // A timed-out/cancelled request can still have a queued transferable reply.
+      data.bitmap?.close();
+      return;
+    }
     pending.delete(data.id);
     clearTimeout(p.timer);
-    data.error ? p.reject(new Error(data.error)) : p.resolve(data);
+    if (data.error) {
+      data.bitmap?.close();
+      p.reject(new Error(data.error));
+    } else p.resolve(data);
   };
   worker.onerror = () => {
     for (const p of pending.values())
@@ -78,22 +85,28 @@ export async function openImageInput(file, signal) {
             "Ya hay una conversión en curso. Espera a que termine.",
           );
         decoding = true;
+        let transferredBitmap;
         try {
-          const { width, height, orientation, pixels } = await request({
+          const { width, height, orientation, pixels, bitmap } = await request({
             action: "decode",
             index,
           });
+          transferredBitmap = bitmap;
           checkOpen();
           const original = document.createElement("canvas");
           original.width = width;
           original.height = height;
-          original
-            .getContext("2d")
-            .putImageData(
-              new ImageData(new Uint8ClampedArray(pixels), width, height),
-              0,
-              0,
-            );
+          if (transferredBitmap) {
+            original.getContext("2d").drawImage(transferredBitmap, 0, 0);
+          } else {
+            original
+              .getContext("2d")
+              .putImageData(
+                new ImageData(new Uint8ClampedArray(pixels), width, height),
+                0,
+                0,
+              );
+          }
           const canvas = document.createElement("canvas");
           canvas.width = orientation >= 5 ? height : width;
           canvas.height = orientation >= 5 ? width : height;
@@ -130,6 +143,7 @@ export async function openImageInput(file, signal) {
             throw e;
           }
         } finally {
+          transferredBitmap?.close();
           decoding = false;
         }
       },

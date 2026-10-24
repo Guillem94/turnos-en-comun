@@ -48,12 +48,15 @@ async function tree(folder) {
     }
   }
 }
-for (const folder of ["src", "tests", "vendor", "legal"]) await tree(folder);
+for (const folder of ["src", "tests", "pages-tests", "vendor", "legal"])
+  await tree(folder);
 for (const name of [
   "index.html",
   "package.json",
   "package-lock.json",
   "playwright.config.js",
+  "playwright.pages.config.js",
+  "vite.config.js",
   ".gitignore",
   ".gitattributes",
   ".github/workflows/ci.yml",

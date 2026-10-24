@@ -4,6 +4,14 @@ Organiza los turnos de dos personas y encuentra tiempo libre en común. Interfaz
 
 **Versión 0.5.0 publicada en [Guillem94/turnos-en-comun](https://github.com/Guillem94/turnos-en-comun).** Código propio bajo [MIT](LICENSE), Copyright (c) 2026 Guillem Carrion. Las bibliotecas de terceros conservan sus condiciones, detalladas en [THIRD-PARTY-NOTICES.md](THIRD-PARTY-NOTICES.md). No se ha enviado ninguna candidatura.
 
+## Demo HTTPS para pruebas ficticias
+
+Dirección de la demo: [Guillem94.github.io/turnos-en-comun/](https://Guillem94.github.io/turnos-en-comun/). Consultar [Actions](https://github.com/Guillem94/turnos-en-comun/actions) para el commit y resultado reales.
+
+Al abrirla, elegir **Probar demo con datos ficticios**. El calendario se guarda solo en ese navegador/origen: no sincroniza con el PC ni otros móviles. No es una PWA ni promete funcionamiento offline. La aplicación no sube imágenes, texto OCR o turnos; OCR y conversión se ejecutan localmente, sin analítica propia ni proveedor OCR remoto.
+
+GitHub recibe la IP y las solicitudes de archivos estáticos necesarias para servir Pages: no equivale a navegación sin contacto con el hosting. Véanse [GitHub Pages y registro de IP](https://docs.github.com/en/pages/getting-started-with-github-pages/what-is-github-pages#data-collection) y la [declaración de privacidad de GitHub](https://docs.github.com/en/site-policy/privacy-policies/github-general-privacy-statement). Usar solo datos ficticios para estas pruebas. WebKit automatizado no acredita Safari en un iPhone físico; la aceptación móvil sigue pendiente del checklist.
+
 ## Arrancar
 
 Requisitos: Node.js 22.12+ o 24 LTS, npm y navegador moderno con WebAssembly. Desde esta carpeta:
@@ -30,4 +38,4 @@ ICS es exportación manual para importar en el móvil, sin sincronización. Expo
 
 React/Vite, dominio y parsers separados; sin servidor de datos. [Arquitectura, límites, licencias y sustitución del codec](docs/DISTRIBUTION.md). [Pruebas reproducibles](docs/TESTING.md). [Contribución](CONTRIBUTING.md). El proyecto no depende de servicios de desarrollo o aplicaciones privadas.
 
-La CI está activa en [GitHub Actions](https://github.com/Guillem94/turnos-en-comun/actions). El workflow comprueba formato, pruebas Node, compilación y la suite E2E con Chromium. Consulta allí el resultado del commit concreto: esta descripción no acredita que el incremento E2E ya haya pasado en CI. La aceptación en móviles físicos sigue pendiente; registra las pruebas reales con el [checklist móvil](docs/MOBILE-CHECKLIST.md). private:true impide una publicación npm accidental; no es una declaración de visibilidad de un repositorio Git. No se afirma adopción externa ni selección en programas.
+La CI está activa en [GitHub Actions](https://github.com/Guillem94/turnos-en-comun/actions). El workflow comprueba formato, pruebas Node, compilación y la suite E2E con Chromium. Consulta allí el resultado del commit concreto: la documentación no sustituye el resultado de una ejecución concreta. La aceptación en móviles físicos sigue pendiente; registra las pruebas reales con el [checklist móvil](docs/MOBILE-CHECKLIST.md). private:true impide una publicación npm accidental; no es una declaración de visibilidad de un repositorio Git. No se afirma adopción externa ni selección en programas.

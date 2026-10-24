@@ -45,7 +45,7 @@ self.onmessage = async ({ data }) => {
         // Fixed same-origin resource, deliberately outside the app bundle so
         // users can replace an interface-compatible LGPL library independently.
         const codecUrl = new URL(
-          "/codecs/libheif/libheif-bundle.mjs",
+          `${import.meta.env?.BASE_URL || "/"}codecs/libheif/libheif-bundle.mjs`,
           self.location.origin,
         ).href;
         let factory;
@@ -174,6 +174,21 @@ self.onmessage = async ({ data }) => {
           width = image.displayWidth ?? image.width;
           height = image.displayHeight ?? image.height;
           checkDimensions(width, height);
+          if (bitmap && typeof OffscreenCanvas === "undefined") {
+            // Keep the original bitmap in this worker for repeated decodes.
+            // Only transfer a copy; main paints it without decoding the file again.
+            const copy = await createImageBitmap(image);
+            try {
+              self.postMessage(
+                { id: data.id, width, height, orientation, bitmap: copy },
+                [copy],
+              );
+            } catch (error) {
+              copy.close();
+              throw error;
+            }
+            return;
+          }
           const canvas = new OffscreenCanvas(width, height),
             ctx = canvas.getContext("2d");
           ctx.drawImage(image, 0, 0);

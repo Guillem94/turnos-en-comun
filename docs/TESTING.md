@@ -55,3 +55,39 @@ python scripts/package-candidate.py <carpeta-candidata>
 ```
 
 El empaquetador rechaza rutas externas/ambiguas, duplicados, versiones inconsistentes y archivos esenciales ausentes; verifica enlaces, fuentes nativas y avisos web/source. Congela los bytes antes de escribir y comprueba todos los miembros del ZIP mediante ARTIFACT-MANIFEST.json. No sobrescribe un paquete existente. Su validación no sustituye la comparación con un build limpio ni certifica ausencia absoluta de información sensible.
+
+## Smoke Pages en subruta: Chromium y WebKit
+
+Suite separada `pages-tests/`, dos casos por navegador con viewport 390×844. No modifica la suite root. Comprueba UI, CRUD nocturno, persistencia, JSON/ICS, PNG/HEIC reales con Tesseract, candidatos/evidencia y cancelación sin mutación. Observa peticiones/respuestas de navegador y workers, rechaza recursos fuera del origen/subruta, métodos distintos de GET/HEAD y errores HTTP. No sustituye respuestas ni simula OCR. Consola, fallos de red y screenshots quedan en `test-artifacts/pages-results/`, ignorado por Git, sin upload adicional. Los datos de cada contexto son ficticios y aislados del perfil habitual.
+
+El ejecutor debe disponer de los navegadores: Edge instalado en Windows para el proyecto Chromium, Chromium de Playwright en Linux/macOS y WebKit de la versión fijada. La CI instala Chromium/WebKit y dependencias oficiales solo en el runner. Esta preparación no instala navegadores en el PC.
+
+Preparar y probar la subruta en PowerShell (puerto 5179 libre, sin otro preview ni E2E):
+
+```powershell
+$env:TURNOS_BASE_PATH = '/turnos-en-comun/'
+npm run build
+npm run test:pages
+Remove-Item Env:TURNOS_BASE_PATH
+```
+
+Equivalente POSIX:
+
+```sh
+TURNOS_BASE_PATH=/turnos-en-comun/ npm run build
+TURNOS_BASE_PATH=/turnos-en-comun/ npm run test:pages
+```
+
+La configuración arranca y cierra su propio preview loopback y no reutiliza servidores. Sin `TURNOS_BASE_PATH`, Vite conserva `/` para build/root. Se admiten únicamente rutas absolutas de path con barra final, no URLs ni proxies. Para volver a las pruebas root, reconstruir sin esa variable.
+
+Después de publicar y verificar el despliegue, el ejecutor puede probar la URL pública final sin arrancar servidor local:
+
+```powershell
+$env:PAGES_URL = 'https://Guillem94.github.io/turnos-en-comun/'
+npm run test:pages
+Remove-Item Env:PAGES_URL
+```
+
+`PAGES_URL` exige HTTPS, barra final y ausencia de credenciales/query/fragmento. No usar una URL de sesión ni datos personales. Consultar el estado del despliegue y commit concretos en Actions; esta guía no sustituye sus resultados. El job `pages-build` depende de `test-build` y solo se ejecuta en push/manual de main; valida el build de subruta antes de subir exclusivamente `dist`. El job de deploy usa permisos temporales `pages:write`/`id-token:write`, sin secretos ni permisos OAuth nuevos. No se despliega desde PR.
+
+El hosting GitHub recibe IP/solicitudes estáticas ([documentación oficial](https://docs.github.com/en/pages/getting-started-with-github-pages/what-is-github-pages#data-collection)); la app no envía imágenes/OCR, no tiene analítica propia, sincronización ni PWA/offline. WebKit de Playwright no es una prueba en iPhone: registrar aparte los resultados físicos reales en MOBILE-CHECKLIST.md.

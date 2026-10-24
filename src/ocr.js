@@ -200,9 +200,9 @@ export async function recognizeCalendar(
   };
   try {
     worker = await createWorker("eng", 1, {
-      workerPath: "/ocr/worker.min.js",
-      corePath: "/ocr/core",
-      langPath: "/ocr/lang",
+      workerPath: `${import.meta.env?.BASE_URL || "/"}ocr/worker.min.js`,
+      corePath: `${import.meta.env?.BASE_URL || "/"}ocr/core`,
+      langPath: `${import.meta.env?.BASE_URL || "/"}ocr/lang`,
       workerBlobURL: false,
       cacheMethod: "none",
       logger: (m) =>

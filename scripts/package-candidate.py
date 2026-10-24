@@ -80,20 +80,32 @@ class Links(HTMLParser):
     def handle_starttag(self, tag, attrs):
         for name, value in attrs:
             if name in {'href', 'src'} and value:
-                self.paths.append(value)
+                self.paths.append((tag, name, value))
 
 
 def verify_html_links(web):
     for page in ['index.html', 'legal/index.html']:
         parser = Links()
         parser.feed(web[page].decode('utf-8'))
-        for value in parser.paths:
+        for tag, attribute, value in parser.paths:
             url = urlsplit(value)
             if url.scheme or url.netloc:
+                if tag == 'a' and attribute == 'href' and value == 'https://github.com/Guillem94/turnos-en-comun':
+                    continue
                 raise ValueError('EXTERNAL_HTML_LINK')
             if not url.path or url.path == '/':
                 continue
-            target = url.path.lstrip('/') if url.path.startswith('/') else (pathlib.PurePosixPath(page).parent / url.path).as_posix()
+            parts = [] if url.path.startswith('/') else list(pathlib.PurePosixPath(page).parent.parts)
+            for part in url.path.split('/'):
+                if part in {'', '.'}:
+                    continue
+                if part == '..':
+                    if not parts:
+                        raise ValueError('UNSAFE_PATH')
+                    parts.pop()
+                else:
+                    parts.append(part)
+            target = '/'.join(parts) or 'index.html'
             safe_path(target)
             if target not in web:
                 raise ValueError('MISSING_LINKED_WEB_FILE')

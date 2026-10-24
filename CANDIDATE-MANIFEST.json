@@ -9,8 +9,8 @@
     },
     {
       "path": ".github/workflows/ci.yml",
-      "bytes": 1207,
-      "sha256": "f2581480abd6fd3f317350eefca18a249f8ee00b659988a3f6577784838fefab"
+      "bytes": 2696,
+      "sha256": "cc2fff5ccd2f5a5f74b7c9ee6883da0ba3255fc56218cfc8463dafb9a0743b9e"
     },
     {
       "path": ".gitignore",
@@ -24,8 +24,8 @@
     },
     {
       "path": "docs/DISTRIBUTION.md",
-      "bytes": 6415,
-      "sha256": "e880a88bfd2402edeb971fdecd30b1c1844c64fbfbdc60a8ca38a9d2ebe1066f"
+      "bytes": 6743,
+      "sha256": "53857aa9797b8b9a41e38ea8835fb650fdc4297543fbf58462c5a53b372d51e7"
     },
     {
       "path": "docs/public/CONTRIBUTING.md",
@@ -34,8 +34,8 @@
     },
     {
       "path": "docs/public/DISTRIBUTION.md",
-      "bytes": 6415,
-      "sha256": "e880a88bfd2402edeb971fdecd30b1c1844c64fbfbdc60a8ca38a9d2ebe1066f"
+      "bytes": 6743,
+      "sha256": "53857aa9797b8b9a41e38ea8835fb650fdc4297543fbf58462c5a53b372d51e7"
     },
     {
       "path": "docs/public/LICENSE-DECISION.md",
@@ -54,8 +54,8 @@
     },
     {
       "path": "docs/public/README.md",
-      "bytes": 3507,
-      "sha256": "e6d611632e5490226a91197aafe3b0108598979e494be3a7a4e93bfed0caa3d4"
+      "bytes": 4695,
+      "sha256": "d97635c0355ed7edb5fd95632a4ffa3fad5f14714862f974afb3a9c5ae2b81f1"
     },
     {
       "path": "docs/public/SECURITY.md",
@@ -64,8 +64,8 @@
     },
     {
       "path": "docs/public/TESTING.md",
-      "bytes": 5162,
-      "sha256": "8be30e9fe68b331026821afa3138edc0a0e958dbef6984449669321dbd6f9d75"
+      "bytes": 7945,
+      "sha256": "e1870945f466f1f23cbd585cc3bd360cc390a259170e07e27ad6552ed7a2294d"
     },
     {
       "path": "docs/public/VALIDATION.md",
@@ -74,13 +74,13 @@
     },
     {
       "path": "docs/MOBILE-CHECKLIST.md",
-      "bytes": 2439,
-      "sha256": "c2bbb6601db3c32335c18caa0eb17cbc20abb38c87f7dc4c05e82d75423145c2"
+      "bytes": 2978,
+      "sha256": "ef7f6013e5f94542caba2e6197dd457a49185f1f05849c1c6cc162a700ff0793"
     },
     {
       "path": "docs/TESTING.md",
-      "bytes": 5162,
-      "sha256": "8be30e9fe68b331026821afa3138edc0a0e958dbef6984449669321dbd6f9d75"
+      "bytes": 7945,
+      "sha256": "e1870945f466f1f23cbd585cc3bd360cc390a259170e07e27ad6552ed7a2294d"
     },
     {
       "path": "docs/VALIDATION.md",
@@ -104,8 +104,8 @@
     },
     {
       "path": "index.html",
-      "bytes": 734,
-      "sha256": "24bedf33441080656c2858e572ce5e26f3adcaaea80242c817cf59d76331d3dc"
+      "bytes": 743,
+      "sha256": "fc68dc23278235aba04c6a8c325b7e32f923cd71cd0e9ec1fd2d8775baee086c"
     },
     {
       "path": "legal/README.md",
@@ -379,8 +379,8 @@
     },
     {
       "path": "package.json",
-      "bytes": 2003,
-      "sha256": "d71ec64f2d4164c85f2419d6f6b9ebca62fd88bf4f0ca8a8d4e145d1125f3a46"
+      "bytes": 2184,
+      "sha256": "8c7791dace056486d0bb49fd6634e4855d8a07e645f34cfe672a954258ddbaea"
     },
     {
       "path": "playwright.config.js",
@@ -399,8 +399,8 @@
     },
     {
       "path": "README.md",
-      "bytes": 3507,
-      "sha256": "e6d611632e5490226a91197aafe3b0108598979e494be3a7a4e93bfed0caa3d4"
+      "bytes": 4695,
+      "sha256": "d97635c0355ed7edb5fd95632a4ffa3fad5f14714862f974afb3a9c5ae2b81f1"
     },
     {
       "path": "scripts/encode-fixture-worker.mjs",
@@ -409,8 +409,8 @@
     },
     {
       "path": "scripts/export-candidate.mjs",
-      "bytes": 4906,
-      "sha256": "128775fdecc0989c947dc0c9e03fc11c6a3461b0955874a2dcf42731b8795471"
+      "bytes": 4975,
+      "sha256": "7cad8302fcb70642f22cbd4af76f5f4d126917ae720e5b251cb54ddc1352c3cf"
     },
     {
       "path": "scripts/fixture-manifest.mjs",
@@ -439,13 +439,13 @@
     },
     {
       "path": "scripts/package-candidate.py",
-      "bytes": 9174,
-      "sha256": "d6cba5d1d2a29a370db17171b4cefd0e65598bc52430db7c70861729c089d6c8"
+      "bytes": 9697,
+      "sha256": "677b552ec28a5802c2a40587d37e69bd1e4d2e07a19ae22e98457d981247ae7d"
     },
     {
       "path": "scripts/prepare-assets.mjs",
-      "bytes": 3550,
-      "sha256": "568de1398e72bc84f90346ae5560d9d117f4fd27f9b4d0ffcbe0a582068dbafa"
+      "bytes": 3650,
+      "sha256": "55817f730d323e3886a13e7c6b504409c52c903509c0083985adcb9507fa3ccf"
     },
     {
       "path": "scripts/prepare-native-sources.mjs",
@@ -474,8 +474,8 @@
     },
     {
       "path": "src/App.jsx",
-      "bytes": 21782,
-      "sha256": "3a3ddd383b84773c2eef9414cd0476f99978203ec2b637e71a4a71b46192cbf2"
+      "bytes": 21865,
+      "sha256": "7d9562e5416e8045a4581336bf54c22e4fd6f853c3b576fa6322e80d13046af0"
     },
     {
       "path": "src/avif-header.js",
@@ -529,8 +529,8 @@
     },
     {
       "path": "src/image-decoder.worker.js",
-      "bytes": 6733,
-      "sha256": "c4e6aff4b9de66b1862effbf83d051fec2c95b10c56eb4ef5c412b0038d83edc"
+      "bytes": 7349,
+      "sha256": "f5832ec85c76ec3355c5046134189505b65fb0c9df1dd1a8604fd1af9455311b"
     },
     {
       "path": "src/image-header.js",
@@ -539,8 +539,8 @@
     },
     {
       "path": "src/image-input.js",
-      "bytes": 4439,
-      "sha256": "3276eb4c21f4f615207eee92348ab011d6cc313627d80a9dff8d35963351e5cc"
+      "bytes": 4882,
+      "sha256": "a1f4d83180f042667436956edae877af35575a790a4395775ba3d6e0d407569f"
     },
     {
       "path": "src/import-layout.js",
@@ -554,8 +554,8 @@
     },
     {
       "path": "src/ocr.js",
-      "bytes": 10552,
-      "sha256": "50cb079bb6075cd1c2db315727270ea9eb9204803b1a8e4f7630c8b195e719e2"
+      "bytes": 10654,
+      "sha256": "c590d193fc98d516793585bcdb5308e22859637311fef28911454cbd6e6e8345"
     },
     {
       "path": "src/storage.js",
@@ -809,13 +809,13 @@
     },
     {
       "path": "tests/package_candidate_test.py",
-      "bytes": 4102,
-      "sha256": "abc3936aa126c29e6966fad3f0e81d549bd9f4ec99eed0bbdc0d719302db4bfb"
+      "bytes": 4789,
+      "sha256": "7b1a6865ecd747860ad39c9cf15c8591e3ff95354a0f29a517bd058877584339"
     },
     {
       "path": "tests/recomposition.spec.js",
-      "bytes": 6692,
-      "sha256": "062b6fdbbd8e3eb8a1a7709ee5d2a786f3c6724e83f1ae4e3a99c819fa585f8e"
+      "bytes": 6845,
+      "sha256": "e67474965d5bab735177ca47f3eaac9d2a8e34f75afab27998c822bc64d938a9"
     },
     {
       "path": "tests/tiff-dev.spec.js",
@@ -889,8 +889,23 @@
     },
     {
       "path": "docs/public/MOBILE-CHECKLIST.md",
-      "bytes": 2439,
-      "sha256": "c2bbb6601db3c32335c18caa0eb17cbc20abb38c87f7dc4c05e82d75423145c2"
+      "bytes": 2978,
+      "sha256": "ef7f6013e5f94542caba2e6197dd457a49185f1f05849c1c6cc162a700ff0793"
+    },
+    {
+      "path": "pages-tests/pages.spec.js",
+      "bytes": 9699,
+      "sha256": "9880c5b9d75ca1a52746bc53e3f40ab48ef60200d672b55a9115f6fe97d74508"
+    },
+    {
+      "path": "playwright.pages.config.js",
+      "bytes": 1488,
+      "sha256": "174000192d4b0e70209d86afe0224c1f81b8159625242a8cd8d72f87060b31dd"
+    },
+    {
+      "path": "vite.config.js",
+      "bytes": 272,
+      "sha256": "c05a37f276f627d64cea7df96431dca3a382414e91fd64068ffee7ac5b6930ed"
     }
   ],
   "exportedByAllowlist": true,

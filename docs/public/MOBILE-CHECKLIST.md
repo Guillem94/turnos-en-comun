@@ -4,7 +4,7 @@ Estado inicial: **pendiente**, sin resultados físicos acreditados. Ejecutar por
 
 ## Entorno y registro
 
-El loopback del PC (`127.0.0.1`) no llega a otro móvil. Decidir y autorizar el entorno de acceso por separado: este checklist no abre LAN ni autoriza publicar una demo. Usar exclusivamente fixtures ficticios del repositorio y un almacenamiento de prueba, nunca calendarios personales.
+El loopback del PC (`127.0.0.1`) no llega a otro móvil. Se ha autorizado preparar una demo HTTPS en GitHub Pages: https://Guillem94.github.io/turnos-en-comun/ (demo de código público y datos ficticios). Comprobar el estado del despliegue en Actions antes de probar; no abrir LAN ni cambiar firewall o certificados. Pulsar «Probar demo con datos ficticios». Usar exclusivamente fixtures ficticios del repositorio y un almacenamiento de prueba, nunca calendarios personales.
 
 Registrar en cada ejecución: fecha, dispositivo, versión de SO/navegador, versión de aplicación y SHA del commit, entorno autorizado, ruta/hash del fixture ficticio, zona IANA, pasos, resultado esperado y observado. Marcar **PASS / FAIL / NO PROBADO / NO SOPORTADO**, con el motivo real; no convertir ausencia de prueba en éxito.
 
@@ -27,3 +27,5 @@ Completar una fila por caso y dispositivo; mientras no se ejecute, permanece pen
 | Pendiente | Pendiente | Pendiente | Pendiente | No ejecutado | NO PROBADO |
 
 No incluir imágenes, turnos ni datos personales en los resultados. Las pruebas automatizadas con imágenes rasterizadas no acreditan esta aceptación física.
+
+La demo guarda datos solo en este navegador/origen, sin sincronización ni PWA/offline. GitHub recibe IP y solicitudes estáticas al servirla; no hay analítica propia ni proveedor OCR remoto, y la app no sube imágenes/texto OCR. WebKit automatizado no acredita iPhone físico: conservar el estado NO PROBADO hasta la comprobación humana real.
