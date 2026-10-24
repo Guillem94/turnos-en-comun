@@ -344,7 +344,13 @@ export default function App() {
             </div>
             {page !== "settings" && (
               <div className="heading-actions">
-                <button onClick={() => setImporter(true)}>
+                <button
+                  onClick={(event) => {
+                    // WebKit pointer activation does not focus buttons by default.
+                    event.currentTarget.focus({ preventScroll: true });
+                    setImporter(true);
+                  }}
+                >
                   Importar imagen
                 </button>
                 <button

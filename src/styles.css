@@ -654,6 +654,11 @@ nav button span {
   backdrop-filter: blur(3px);
 }
 .modal-head {
+  position: sticky;
+  top: -26px;
+  z-index: 2;
+  background: white;
+  padding-block: 12px;
   display: flex;
   align-items: center;
   justify-content: space-between;
